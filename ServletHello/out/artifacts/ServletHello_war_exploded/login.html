@@ -1,0 +1,63 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="t">
+    <div class="h">
+        <div class="logo"><img src="images/login_logo.png"></div>
+        <a class="help" href="https://mail.swpu.edu.cn/?q=help" target="blank">帮助</a>
+    </div>
+</div>
+<div class="c">
+    <div class="box" id=box style="left: auto;top:60px;right:60px;">
+        <ul class="tab" id="tab">
+            <li class="current" id="via_acct">账号登录</li>
+            <li class="dragbar" id="dragbar"></li>
+            <div class="msg" id="msg">请填写用户名和密码</div>
+        </ul>
+        <div class="boxc" id="tab_via_acct">
+            <h3>
+                用户登录
+            </h3>
+            <form name="form_login" action="login" method="post">
+                <div class="text_item">
+                    <input class="text" name="username" id="username" value="${cookie.username.value}" style="font-size: 17px; " onfocus="this.className='text_f'"
+                           onblur="this.className='text'" type="text" placeholder="用户名" autocomplete="off"
+                           _placeholder="用户名">
+                </div>
+
+                <div class="text_item">
+                    <input class="text" name="password" id="password" value="${cookie.password.value}" onfocus="this.className='text_f'"
+                           onblur="this.className='text'" type="password" placeholder="密码" _placeholder="密码">
+                </div>
+                <div class="bl">
+                        <span style="float:left">
+                            <input name="login_ssl" type="hidden" value="0">
+                            <font style="color:red;font-family:宋体;clear: both;">学生选择@stu.swpu.edu.cn</font>
+                        </span>
+                    <span class="blt">
+                            <a href="https://mail.swpu.edu.cn/?q=resetpw" target="_self">忘记密码</a>
+                        </span>
+                </div>
+                <div class="btnb">
+                    <input name="submit" class="btn" style="float:right" type="submit" value="登  录">
+                    <div style="clear:both"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="b">
+    西南石油大学
+
+</div>
+</body>
+
+</html>
